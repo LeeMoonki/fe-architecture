@@ -1,0 +1,10 @@
+node_modules
+public
+.*
+*.json
+*.lock
+*.md
+*.config.js
+*.css
+*.svg
+*.mdx
