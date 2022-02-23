@@ -1,11 +1,4 @@
-# Create React App pether template
+# 프론트엔드 아키텍처를 고민합니다.
 
-This Template includes following
-
-- [React](https://reactjs.org/)
-- [Typescript](https://www.typescriptlang.org/)
-- Test([Jest](https://jestjs.io/), [Testing Library](https://testing-library.com/docs/react-testing-library/intro/))
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [husky](https://typicode.github.io/husky/#/)
-- [Emotion](https://emotion.sh/docs/introduction)
+1. 참여자 각자의 브랜치를 만들어 작업합니다.
+2. main 브랜치에는 공통적으로 기록하면 좋을 내용을 기록합니다.
