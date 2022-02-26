@@ -24,7 +24,8 @@
     "jsxImportSource": "@emotion/react",
     "experimentalDecorators": true,
     "typeRoots": ["./node_modules/@types", "./src/@types"],
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "downlevelIteration": true,
   },
   "include": [
     "src"

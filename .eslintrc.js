@@ -40,6 +40,7 @@ module.exports = {
         'class-methods-use-this': 'off',
         'func-names': 'off',
         'operator-assignment': 'off',
+        'adjacent-overload-signatures': 'off',
 
         '@typescript-eslint/explicit-module-boundary-types': 'off',
 
