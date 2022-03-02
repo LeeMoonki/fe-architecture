@@ -20,6 +20,10 @@ class Password {
   private isValidLength() {
     return this._password.length >= 8 && this._password.length <= 20;
   }
+
+  public equals(other: Password) {
+    return this._password === other.getValue();
+  }
 }
 
 export default Password;

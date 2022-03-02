@@ -12,6 +12,10 @@ class Email {
   public isValid() {
     return this._email.length <= 200 && /^[\w\d]+@[\w\d]+\.[\w\d]+$/.test(this._email);
   }
+
+  public equals(other: Email) {
+    return this._email === other.getValue();
+  }
 }
 
 export default Email;

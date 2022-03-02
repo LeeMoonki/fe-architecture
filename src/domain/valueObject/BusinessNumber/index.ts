@@ -12,6 +12,10 @@ class BusinessNumber {
   public isValid() {
     return /^\d{10}$/.test(this._businessNumber);
   }
+
+  public equals(other: BusinessNumber) {
+    return this._businessNumber === other.getValue();
+  }
 }
 
 export default BusinessNumber;

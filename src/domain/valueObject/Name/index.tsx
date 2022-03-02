@@ -20,6 +20,10 @@ class Name {
   private isValidLength() {
     return this._name.length > 0 && this._name.length <= 50;
   }
+
+  public equals(name: Name) {
+    return this._name === name.getValue();
+  }
 }
 
 export default Name;
