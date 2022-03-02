@@ -80,4 +80,13 @@
 | 로그인(Login) | 회원 또는 기업회원이 서비스를 이용하기위해 로그인을 합니다. |
 | 로그아웃(Logout) | 회원 또는 기업회원이 서비스에서 로그아웃 합니다. |
 
+<h2>상품 서비스(ProductApplicationService)</h2>
+
+사용자가 상품을 관리하는 서비스를 제공합니다.
+| 이름 | 설명 |
+|-|-|
+| 등록(Register) | 상품을 등록합니다. |
+| 수정(Edit) | 상품을 수정합니다. |
+| 등록한 상품 리스트 조회(Fetch Registered Products) | 기업 회원이 등록한 상품 리스트를 조회합니다. |
+
 [docs]: https://docs.google.com/presentation/d/16vdPB7ACHmY8jmFKQP5jLajT8XakD37dZUzITi1Uz_o/edit#slide=id.g112112406c1_1_0
