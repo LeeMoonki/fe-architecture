@@ -48,6 +48,10 @@ class Product {
   get registerDate() {
     return this._registerDate;
   }
+
+  get discountPrice() {
+    return this._price - this._discountAmount;
+  }
 }
 
 export default Product;

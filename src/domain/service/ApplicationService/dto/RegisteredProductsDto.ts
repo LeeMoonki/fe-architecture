@@ -50,7 +50,12 @@ class RegisteredProductDto {
   }
 
   get price() {
+    // 도메인 로직을 그대로 사용
     return this._product.price;
+  }
+
+  get discountPrice() {
+    return this._product.discountPrice;
   }
 
   get discountAmount() {
