@@ -11,8 +11,6 @@ export class UserService {
   public static signIn(dto: UserSignInDto) {
     // 서버에 비동기 통신하여 로그인성공 응답을 받는다.
     console.log(dto);
-    const user = new User(1, 'a', 'b', 'c', 'd');
-    console.log(user);
   }
 
   public static signOut() {
