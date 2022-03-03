@@ -28,6 +28,7 @@ module.exports = {
       ],
       rules: {
         'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+        'no-useless-escape': 'off',
 
         eqeqeq: ['error', 'always'],
         'no-use-before-define': 'off',
