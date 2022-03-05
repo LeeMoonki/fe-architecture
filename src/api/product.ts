@@ -1,5 +1,8 @@
 import RegisterProductPayloadDTO from 'Service/ApplicationService/dto/RegisterProductPayloadDTO';
 
 export const createProduct = (payload: RegisterProductPayloadDTO) => {
-  return true;
+  return new Promise((resolve) => {
+    console.log(payload);
+    resolve(true);
+  });
 };

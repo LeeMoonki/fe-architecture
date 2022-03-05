@@ -40,7 +40,7 @@ module.exports = {
         'class-methods-use-this': 'off',
         'func-names': 'off',
         'operator-assignment': 'off',
-
+        'no-return-await': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
 
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
