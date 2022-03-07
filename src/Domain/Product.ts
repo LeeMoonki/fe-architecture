@@ -19,8 +19,8 @@ export default class Product {
   private _price?: number; // 판매가
 
   @IsNumber()
-  @Expose({ name: 'discountRate' })
-  private _discountRate?: number; // 할인율
+  @Expose({ name: 'discountAmount' })
+  private _discountAmount?: number; // 할인율
 
   @IsNumber()
   @Expose({ name: 'amount' })
@@ -65,8 +65,8 @@ export default class Product {
     return this._price;
   }
 
-  get discountRate(): number | undefined {
-    return this._discountRate;
+  get discountAmount(): number | undefined {
+    return this._discountAmount;
   }
 
   get amount(): number | undefined {
