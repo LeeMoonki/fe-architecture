@@ -1,11 +1,14 @@
 import Product from 'Entities/Product';
 import User from 'Entities/User';
 import ProductDiscountPrice from 'valueObject/Product/ProductDiscountPrice';
+import RegisterProductPayloadDTO from './RegisterProductPayloadDTO';
 
 /**
  * 값과 벨리데이션을 같이 들고 있다.
  */
-export default class RegisterProductPayloadDTO {
+export default class EditProductPayloadDTO {
+  private _id: number;
+
   private _title: string;
 
   private _price: number;
@@ -19,6 +22,7 @@ export default class RegisterProductPayloadDTO {
     this._price = product.price;
     this._discount = new ProductDiscountPrice(product.discount || 0);
     this._userId = user.id;
+    this._id = product.id || 0;
   }
 
   get discount(): number {
@@ -53,16 +57,27 @@ export default class RegisterProductPayloadDTO {
     this._userId = value;
   }
 
+  get id(): number {
+    return this.id;
+  }
+
+  set id(value: number) {
+    this._id = value;
+  }
+
   toJSON() {
     return {
-      title: this._title,
-      price: this._price,
-      discount: this._discount,
-      userId: this._userId,
+      id: this.id,
+      title: this.title,
+      price: this.price,
+      discount: this.discount,
+      userId: this.userId,
     };
   }
 
   isValid() {
-    return this._title && this._price && this._discount.isValid(this._price) && this._userId;
+    return (
+      this._title && this._price && this._discount.isValid(this._price) && this._userId && this._id
+    );
   }
 }
