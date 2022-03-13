@@ -1,6 +1,7 @@
-import { createProduct, editProduct } from '../../api/product';
+import { createProduct, editProduct, findProductsBy } from '../../api/product';
 import EditProductPayloadDTO from './dto/EditProductPayloadDTO';
 import RegisterProductPayloadDTO from './dto/RegisterProductPayloadDTO';
+import FindProductsPayloadDTO from './dto/FindProductsPayloadDTO';
 
 export default class ProductApplicationService {
   public registerProduct(payload: RegisterProductPayloadDTO) {
@@ -15,5 +16,12 @@ export default class ProductApplicationService {
       throw new Error('Invalid payload');
     }
     return editProduct(payload);
+  }
+
+  public findProductsBy(payload: FindProductsPayloadDTO) {
+    if (!payload.isValid()) {
+      throw new Error('Invalid payload');
+    }
+    return findProductsBy(payload);
   }
 }
