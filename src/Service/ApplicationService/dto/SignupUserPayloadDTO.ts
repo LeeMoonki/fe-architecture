@@ -5,7 +5,7 @@ import UserPassword from 'valueObject/User/UserPassword';
 /**
  * 값과 벨리데이션을 같이 들고 있다.
  *
- * 그런데 이렇게 VO하는게 맞나? 순수 도메인이 아니라 다른것과 섞이는 느낌
+ * 그런데 이렇게 VO하는게 맞나? 순수 도메인이 아니라 다른것과과섞이는 느낌
  */
 export default class SignupUserPayloadDTO {
   private _password: UserPassword;

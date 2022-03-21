@@ -1,4 +1,5 @@
-import { createUser } from 'api/user';
+import { createB2BUser, createUser } from 'api/user';
+import SignupB2BUserPayloadDTO from './dto/SignupB2BUserPayloadDTO';
 import SignupUserPayloadDTO from './dto/SignupUserPayloadDTO';
 
 export default class UserApplicationService {
@@ -9,10 +10,10 @@ export default class UserApplicationService {
     return createUser(payload);
   }
 
-  // public signupB2BUser(payload: EditProductPayloadDTO) {
-  //   if (!payload.isValid()) {
-  //     throw new Error('Invalid payload');
-  //   }
-  //   return editProduct(payload);
-  // }
+  public signupB2BUser(payload: SignupB2BUserPayloadDTO) {
+    if (!payload.isValid()) {
+      throw new Error('Invalid payload');
+    }
+    return createB2BUser(payload);
+  }
 }
