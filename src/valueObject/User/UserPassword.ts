@@ -7,10 +7,6 @@ export default class Password implements Vo {
     this._password = password;
   }
 
-  set password(password: string) {
-    this._password = password;
-  }
-
   get password(): string {
     return this._password;
   }
