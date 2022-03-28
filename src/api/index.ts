@@ -3,9 +3,8 @@ import Password from 'valueObject/Password';
 
 async function getResponse() {
   try {
-    const response = await fetch('');
-    const data = await response.json();
-    return data;
+    const response = await Promise.resolve({ data: 'hi' });
+    return response;
   } catch (error) {
     // 최외곽 api 통신에 실패한 경우만 찍힘
     console.error(error);

@@ -1,10 +1,14 @@
+// import 'reflect-metadata';
+import { plainToInstance, Transform } from 'class-transformer';
+import Email from 'valueObject/Email';
+import Password from 'valueObject/Password';
+
 export default class LoginDTO {
-  public email: string;
+  @Transform(({ value }) => plainToInstance(Email, { email: value }))
+  public email: Email = new Email();
 
-  public name: string;
+  public name = '';
 
-  constructor(email: string, name: string) {
-    this.email = email;
-    this.name = name;
-  }
+  @Transform(({ value }) => plainToInstance(Password, { password: value }))
+  public password: Password = new Password();
 }

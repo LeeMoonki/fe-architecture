@@ -8,9 +8,10 @@ import Email from 'valueObject/Email';
 import Password from 'valueObject/Password';
 
 export default class AuthService {
-  public async login({ email, password }: { email: Email; password: Password }) {
-    if (await email.isValid()) {
-      throw new Error();
+  public static async login({ email, password }: { email: Email; password: Password }) {
+    if (!(await email.isValid())) {
+      const errorMessage = await email.errorMessage();
+      throw new Error(errorMessage ? errorMessage[0] : '');
     }
 
     const { data } = await loginApi({ email, password });
@@ -18,11 +19,11 @@ export default class AuthService {
     return plainToInstance(LoginDTO, data);
   }
 
-  public logout() {
+  public static logout() {
     return logoutApi();
   }
 
-  public async signup({
+  public static async signup({
     email,
     password,
     name,
